@@ -125,12 +125,12 @@ for WINDOW_HEIGHT = 1:3:4 %loops twice, once for .5m^2 and once for 2m^2 (math f
     hold off
     
     
-    %Heat Transfer Rate (q) / convection coefficent
+    %Heat Transfer Rate (q) / convection coefficient
     heatTransferRate = resultsVector(:,:,2);
     
-    figure('Name', 'Heat Transfer Rate (q) / Convection Coefficent (h)')  %initalize first figure
+    figure('Name', 'Heat Transfer Rate (q) / Convection Coefficient (h)')  %initalize first figure
     hold on
-    title(sprintf('Heat Transfer Rate (q) / Convection Coefficent (h) for %.1f m^2 area', windowArea));
+    title(sprintf('Heat Transfer Rate (q) / Convection Coefficient (h) for %.1f m^2 area', windowArea));
     xlabel('Convection Coeff. (W/m^2*K)');
     ylabel('Rate of Heat Transfer (W)');
     plot(h_0, heatTransferRate);
@@ -138,13 +138,13 @@ for WINDOW_HEIGHT = 1:3:4 %loops twice, once for .5m^2 and once for 2m^2 (math f
     hold off
     
     
-    %Interface Temp / convection coefficent 
+    %Interface Temp / convection Coefficient 
     interfaceTemp = resultsVector(:,:,1);
     
-    figure('Name', 'Interface Temp (K) / Convection Coefficent (h)')  %initalize first figure
+    figure('Name', 'Interface Temp (K) / Convection Coefficient (h)')  %initalize first figure
     hold on
-    title(sprintf('Interface Temp (K)  / Convection Coefficent (h) for %.1f m^2 area', windowArea));
-    xlabel('Convection Coefficent (h)');
+    title(sprintf('Interface Temp (K)  / Convection Coefficient (h) for %.1f m^2 area', windowArea));
+    xlabel('Convection Coefficient (h)');
     ylabel('Interface Temp (K)');
     plot(h_0, interfaceTemp);
     legend('1 Pane', '2 Panes', '3 Panes');
@@ -183,7 +183,7 @@ for WINDOW_HEIGHT = 1:3:4 %loops twice, once for .5m^2 and once for 2m^2 (math f
     figure('Name', 'Ratio of Convective (q_h) to Radiation (q_r) Losses')  %initalize first figure
     hold on
     bar3([1 2 3], convection_to_radiation_ratio);
-    xlabel('Convection Coefficent (*10 W/m^2*K)');
+    xlabel('Convection Coefficient (*10 W/m^2*K)');
     yticks([1 2 3]);
     ylabel('Num Panes');
     zlabel('Ratio (q_h / q_r)')
